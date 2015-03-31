@@ -54,7 +54,8 @@ bool Hybrid<T>::isEmpty()
 template < class T >
 void Hybrid<T>::enqueue(T* item)
 {
-	T* item1 = sldl->addDN(item);
+	DoubleNode<T>* temp = new DoubleNode<T>*(item);
+	T* item1 = sldl->addDN(temp);
 	q->enqueue(item1);
 }
 
