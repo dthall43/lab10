@@ -44,9 +44,31 @@ Hybrid<T>::~Hybrid()
 //simply comment the first implementation out when working on the second implementation
 //use the getKey method to dequeue/remove
 
+template < class T >
+bool Hybrid<T>::isEmpty()
+{
+	if (q->isEmpty() || sldl->isEmpty())
+		return true;
+}
 
+template < class T >
+void Hybrid<T>::enqueue(T* item)
+{
+	T* item1 = sldl->addDN(item);
+	q->enqueue(item1);
+}
 
+template < class T >
+T* Hybrid<T>::dequeue()
+{
+	
+}
 
+template < class T >
+ListDoublyLinkedIterator<T>* Hybrid<T>::iterator()
+{
+	
+}
 
 
 #endif
